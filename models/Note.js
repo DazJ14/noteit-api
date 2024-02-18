@@ -1,9 +1,14 @@
 const { Schema, model } = require('mongoose')
 
 const noteSchema = new Schema({
-    content: String,
-    created_at: Date,
-    important: Boolean
+    note: Object,
+    favorite: Boolean,
+    created_at: Number,
+    last_edition: Number,
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 })
 
 noteSchema.set('toJSON', {
