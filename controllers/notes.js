@@ -26,11 +26,6 @@ notesRouter.post('/', userExtractor, async (request, response, next) => {
         content: [
           {
             type: 'title',
-            content: [
-              {
-                type: 'text'
-              }
-            ]
           }
         ]
       },
